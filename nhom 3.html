@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tết Nguyên Đán Việt Nam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fff8f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(149, 15, 24, 0.742), rgba(173, 19, 29, 0.381)),
+            url('https://vienchibao.com/wp-content/uploads/2021/01/Y-Nghia-Va-Ve-Dep-Tinh-Te-Cua-Cay-Hoa-Dao-Ngay-Tet-2.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 4em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+        }
+
+        header p {
+            font-size: 1.8em;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        nav {
+            background-color: #a1141f;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.3em;
+            margin: 0 25px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 215, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #c41e2a;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: #ffd700;
+            margin: 20px auto 0;
+        }
+
+        #gioi-thieu img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        #gioi-thieu p {
+            font-size: 1.3em;
+            text-align: justify;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            background: #c41e2a;
+            color: #ffd700;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card p {
+            padding: 25px;
+            text-align: justify;
+        }
+
+        .am-thuc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .mon-an {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .mon-an img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .mon-an h3 {
+            background: #a1141f;
+            color: #ffd700;
+            padding: 15px;
+        }
+
+        .mon-an p {
+            padding: 25px;
+        }
+
+        .meaning-card {
+            display: flex;
+            align-items: center;
+            background: white;
+            margin: 40px auto;
+            max-width: 1000px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .meaning-card img {
+            width: 45%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .meaning-text {
+            width: 55%;
+            padding: 40px;
+        }
+
+        .meaning-text h3 {
+            color: #c41e2a;
+            margin-bottom: 15px;
+        }
+
+        .meaning-text p {
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            margin-top: 50px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            background: #a1141f;
+            color: #ffd700;
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .meaning-card {
+                flex-direction: column;
+            }
+            .meaning-card img {
+                width: 100%;
+                height: 250px;
+            }
+            .meaning-text {
+                width: 100%;
+            }
+            nav a {
+                display: block;
+                margin: 15px 0;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+        }
+        /* ===== Đóng góp ý kiến ===== */
+#dong-gop {
+    margin-top: 80px;
+}
+
+.form-container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    background: #C00707;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #7AAACE;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TẾT NGUYÊN ĐÁN VIỆT NAM</h1>
+    <p>Giữ gìn bản sắc – Kết nối yêu thương</p>
+</header>
+
+<nav>
+    <a href="#gioi-thieu">Giới thiệu</a>
+    <a href="#phong-tuc">Phong tục</a>
+    <a href="#phong-tuc">Ý Nghĩa Tết</a>
+    <a href="#y-nghia">3D</a>
+</nav>
+
+<div class="container">
+
+    <section id="gioi-thieu">
+        <h2>Giới thiệu</h2>
+        <img src="https://cdnv2.tgdd.vn/bhx-static/bhx/production/2026/1/image/News/Images/2026/01/05/1588066/image38_202601052328379462.jpg" alt="Tết">
+        <p> Tết Nguyên Đán, hay còn gọi là Tết Ta, là dịp lễ truyền thống quan trọng nhất của dân tộc Việt Nam.
+            Tết diễn ra vào thời khắc giao thừa giữa năm cũ và năm mới theo âm lịch, đánh dấu sự khởi đầu của mùa
+            xuân mới.
+            Đây không chỉ là thời điểm chuyển giao giữa hai năm mà còn mang ý nghĩa sâu sắc về sự tái sinh của thiên
+            nhiên, lòng biết ơn tổ tiên và niềm hy vọng vào một năm mới an khang, thịnh vượng.
+            Từ bao đời nay, Tết đã trở thành biểu tượng của bản sắc văn hóa Việt, gắn kết các thế hệ và gìn giữ
+            những giá trị tốt đẹp của dân tộc.
+        </p>
+    </section>
+
+    <section id="phong-tuc">
+        <h2>Phong tục truyền thống</h2>
+        <div class="card-container">
+
+            <div class="card">
+                <img src="banhChung.png" alt="Gói bánh chưng">
+                <h3>Gói bánh chưng</h3>
+                <p>Bánh chưng tượng trưng cho đất, được gói từ gạo nếp, đậu xanh, thịt lợn và lá dong.
+                    Việc cả gia đình quây quần gói bánh chưng bên nồi bánh sôi sùng sục là nét đẹp văn hóa không thể
+                    thiếu trong những ngày cận Tết.</p>
+               
+            </div>
+
+            <div class="card">
+                <img src="thoCung2.png" alt="Cúng ông Công ông Táo">
+                <h3>Cúng ông Công ông Táo</h3>
+                <p>Vào ngày 23 tháng Chạp, các gia đình dọn dẹp bàn thờ và làm lễ cúng ông Công ông Táo chầu trời.
+                    Đây là phong tục thể hiện lòng thành kính với các vị thần bếp núc – những người chứng giám việc
+                    gia đình suốt cả năm.</p>
+            </div>
+
+            <div class="card">
+                <img src="liXi2 (1).png" alt="Lì xì">
+                <h3>Lì xì đầu năm</h3>
+                <p>Trong những ngày đầu năm, con cháu đến thăm hỏi, chúc Tết ông bà, cha mẹ và người thân.
+                    Người lớn tặng trẻ em phong bao lì xì đỏ với lời chúc may mắn, tượng trưng cho sự thịnh vượng và
+                    tài lộc trong năm mới.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="y-nghia">
+        <h2>Ý nghĩa Tết</h2>
+
+        <div class="meaning-card">
+            <img src="xumVay.png" alt="Gia đình sum họp">
+            <div class="meaning-text">
+                <h3>Đoàn viên gia đình</h3>
+                <p>Tết Đoàn viên, hay còn gọi là Tết Trung Thu, là dịp đặc biệt để các thành viên trong gia đình sum họp bên nhau. Vào đêm rằm tháng Tám, mọi người cùng quây quần bên mâm cỗ, thưởng thức bánh trung thu và ngắm trăng tròn. Hình ảnh vầng trăng sáng tượng trưng cho sự trọn vẹn, đủ đầy và hạnh phúc. Đây cũng là dịp cha mẹ thể hiện tình yêu thương với con cái qua những chiếc đèn lồng và món quà nhỏ. Không chỉ là ngày hội của thiếu nhi, Tết Đoàn viên còn nhắc nhở mỗi người biết trân trọng mái ấm gia đình. Trong cuộc sống bận rộn hôm nay, những khoảnh khắc sum vầy ấy càng trở nên ý nghĩa và đáng quý hơn bao giờ hết.</p>
+            </div>
+        </div>
+<section id="3D">
+    <h2>3D</h2>
+
+    <div class="sketchfab-embed-wrapper">
+        <iframe 
+            title="TWD TN 05 Banh Chung Bo Dau"
+            width="900"
+            height="500"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            src="https://sketchfab.com/models/4b4fde57e28147bdab928938b108faee/embed">
+        </iframe>
+    </div>
+
+</section>
+
+       <section id="video">
+            <h2>Video Không Khí Tết</h2>
+           <video width="1000" controls>
+    <source src="tiktok_video_2.mp4" type="video/mp4">
+</video>
+    </iframe>
+</section>
+        </div>
+
+    </section>
+
+</div>
+<section id="dong-gop">
+    <h2>Đóng góp ý kiến</h2>
+
+    <div class="form-container">
+        <form>
+            <label>Họ và tên:</label><br>
+            <input type="text" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" required><br><br>
+
+            <label>Ý kiến của bạn:</label><br>
+            <textarea rows="5" required></textarea><br><br>
+
+            <button type="submit">Gửi ý kiến</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <p>Trang web thực hành môn Tin học 12 – 2026</p>
+     <p>Ngọc Huy - Ngọc Hạnh - Phú Đức - Minh Dức - Nhật Khang </p>
+    <p>Lớp 12/3 - Trường THPT Ngũ Hành Sơn</p>
+</footer>
+
+</body>
+</html>
+vienchibao.com
